@@ -1,0 +1,61 @@
+.img1{
+    width:20%;
+    height:20%;
+    margin-left:10%; 
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+body{
+    background-color:#e6ffff;
+}
+h1{
+    text-align:center; 
+    background: rgba(0, 153, 153,0.25);
+    font-size:150%;
+    color:#006666;
+    font-family: 'Cinzel Decorative', cursive;
+}
+b{
+    text-align:right; 
+}
+h2{ 
+    background-color:rgb(0, 153, 153); 
+    text-align:center;
+    color:#ffffff; 
+    margin-right:10%; 
+    margin-left:10% ;
+    border-radius: 10px;
+}
+.score{
+    text-align: right;
+    margin-right:3%;
+    margin-left:75% ;
+    background: rgba(0, 153, 153,0.25);
+    border-radius:6px;
+    font-family: 'News Cycle', sans-serif;
+    color:#006666;
+}
+.im{
+    background: rgba(0, 153, 153,0.25);
+    border-radius:15px; 
+    margin-left:3%;
+    margin-right:3%;   
+}
+.sc{
+    background-color:rgb(0, 153, 153);
+    text-align: right;
+    margin-right:3%; 
+    margin-left:75% ;
+    border-radius:6px;
+    font-family: 'Philosopher', sans-serif;
+    color:#ffffff; 
+}
+.final{
+    background-color: rgb(0, 153, 153);
+    text-align:center;
+    margin-right:3%; 
+    margin-left:3% ;
+    border-radius:15px; 
+    color:#ffffff;
+    font-family: 'Philosopher', sans-serif;
+}
