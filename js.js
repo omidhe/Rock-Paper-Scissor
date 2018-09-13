@@ -60,5 +60,3 @@ function scissor(){
     document.getElementById("s1").innerHTML=comp_score;
     document.getElementById("s2").innerHTML=you_score;
 }
-
-		
