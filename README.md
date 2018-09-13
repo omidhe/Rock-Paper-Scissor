@@ -12,6 +12,7 @@ Program prints computer’s selection, who wins
 At end, computer prints number of games human won and it won
 
 High-level design:
+
     initialize score
     loop
         ask user for choice
@@ -31,9 +32,9 @@ Store the scores in a dictionary with keys “user”, “computer”, “tie”
 
 Part #2: Functions
 
-get user input – getuser()
-get computer choice – getcomp()
-determine winner – whowins()
+1. get user input – getuser()
+2. get computer choice – getcomp()
+3. determine winner – whowins()
 
 Part #3: Refine algorithm
 
@@ -51,45 +52,47 @@ Part #3: Refine algorithm
 
 Represent (object1, object2) where object1 beats object2 as list of tuples, winlist. To see if user won, see if the (user-chosen object, computer-chosen object) tuple is in that list.
 
-def whowins(user, comp):
-    if user == comp:
-        win = "tie"
-    elif (user, comp) in winlist:
-        win = "user"
-    else:
-        win = "computer"
-    return win
+    def whowins(user, comp):
+        if user == comp:
+            win = "tie"
+        elif (user, comp) in winlist:
+            win = "user"
+        else:
+            win = "computer"
+        return win
     
 -- Step #4: Get computer choice
 
 Given the three objects in the sequence things, choose randomly.
 
-def getcomp():
-    pick = random.choice(things)
-    print("Computer picks", pick)
-    return pick
+    def getcomp():
+        pick = random.choice(things)
+        print("Computer picks", pick)
+        return pick
     
 -- Step #5: Get user input
 
 Loop until you get a valid input. If the user types an end of file (control-d) or an interrupt (control-c), act as though the user typed “quit”; report any other exceptions and then act as though the user typed “quit”.
 
-def getuser():
-    while True:
-        try:
-            n = input("Human: enter rock, paper, scissors, quit: ")
-        except (EOFError, KeyboardInterrupt):
-            n = "quit"
-            break
-        except Exception as msg:
-            print("Unknown exception:", msg, "-- quitting")
-            n = "quit"
-            break
-        *** check input ***
-    return n
+    def getuser():
+        while True:
+            try:
+                n = input("Human: enter rock, paper, scissors, quit: ")
+            except (EOFError, KeyboardInterrupt):
+                n = "quit"
+                break
+            except Exception as msg:
+                print("Unknown exception:", msg, "-- quitting")
+                n = "quit"
+                break
+            *** check input ***
+        return n
+    
 To check input, we need to be sure it’s a valid command, so see if it’s in cmdlist:
 
         if n not in cmdlist:
             print("Bad input; try again")
         else:
             break
+            
 Put these together to get the user input routine.
